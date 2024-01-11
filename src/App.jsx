@@ -67,20 +67,22 @@ function App() {
       <div className="flex flex-col">
         <h1 className='text-emerald-500 font-bold my-4'>Crypto prices</h1>
         <div className=' flex flex-col bg-white rounded-2xl p-6'>
-          <div className='flex flex-col gap-4' >
+          <div className='flex flex-col gap-4'>
             <InputCurrency setCurrency={setCurrency} />
             <CryptoCurrency setCrypto={setCrypto} />
             <GetPriceButton getPrice={getPrice} />
           </div>
-
         </div>
         
-          <div className='mt-40'>
-            {loader?<Spinner/>:''}
-            {price !=='' && loader === false ?<Prices price={price} highday={highday} lowday={lowday} />:''}
-          </div>
-        <a className='mt-56 text-lg text-blue-200 underline' target='_blank' href="https://github.com/sebastiancoronel/crypto-react">Github repository</a>
+        <div className='mt-40'>
+          {loader?<Spinner/>:''}
+          {price !=='' && loader === false ?<Prices price={price} highday={highday} lowday={lowday} />:''}
+        </div>
       </div>
+    </div>
+
+    <div className='fixed bottom-0 right-0 mr-48 mb-5 '>
+      <a className='absolute bottom-0 text-lg text-blue-200 underline' target='_blank' href="https://github.com/sebastiancoronel/crypto-react">Github</a>
     </div>
       
     </>
