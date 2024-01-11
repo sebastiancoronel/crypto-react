@@ -17,11 +17,11 @@ function App() {
   const [lowday,setlowday] = useState('');
   const [alert,setAlert] = useState(false);
   const alertMessage = 'All fields must be selected';
-  const [loader, setLoader] = useState(false); 
+  const [loader, setLoader] = useState(false);
 
   const getPrice = async () => {
-    
-    if (crypto === '' || currency === '') {
+
+    if (crypto.target.value === '' || currency.target.value === '') {
       setAlert(true);
       return;
     }else{
