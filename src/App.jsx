@@ -20,8 +20,10 @@ function App() {
   const [loader, setLoader] = useState(false);
 
   const getPrice = async () => {
+    const crypto_value = crypto ? crypto.target.value : '';
+    const currency_value = currency ? currency.target.value : '';
 
-    if (crypto.target.value === '' || currency.target.value === '') {
+    if (crypto_value === '' || currency_value === '') {
       setAlert(true);
       return;
     }else{
@@ -77,7 +79,7 @@ function App() {
             {loader?<Spinner/>:''}
             {price !=='' && loader === false ?<Prices price={price} highday={highday} lowday={lowday} />:''}
           </div>
-
+        <a className='mt-56 text-lg text-blue-200 underline' target='_blank' href="https://github.com/sebastiancoronel/crypto-react">Github repository</a>
       </div>
     </div>
       
