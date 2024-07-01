@@ -81,9 +81,9 @@ function App() {
       </div>
     </div>
 
-    <div className='fixed bottom-0 right-0 mr-48 mb-5 '>
-      <a className='absolute bottom-0 text-lg text-blue-200 underline' target='_blank' href="https://github.com/sebastiancoronel/crypto-react">Github</a>
-    </div>
+    {/* <div className='fixed bottom-0 right-0 mr-48 mb-5 '>
+      <a className='absolute bottom-0 text-lg text-blue-200 underline' target='_blank' href="">Github</a>
+    </div> */}
       
     </>
   )
